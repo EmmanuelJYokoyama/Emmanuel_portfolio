@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Portfólio de Desenvolvedor</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- <link href="../assets/styles/styles.css" rel="stylesheet"> -->
+</head>
+<body class="bg-green text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#home" class="text-white text-2xl font-bold">Meu Portfólio</a>
+      <div>
+        <a href="#projects" class="text-white px-4">Projetos</a>
+        <a href="#about" class="text-white px-4">Sobre Mim</a>
+        <a href="#contact" class="text-white px-4">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center bg-gray-900 text-white">
+    <h1 class="text-5xl font-bold mb-4">Olá, Eu sou Emmanuel Yokoyama</h1>
+    <p class="text-xl">Desenvolvo soluções FullStack em diversas tecnologias.</p>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projects" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-8">Meus Projetos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white p-4 rounded shadow-lg">
+          <h3 class="text-2xl font-bold mb-2">Projeto 1</h3>
+          <p class="mb-4">Descrição breve do projeto.</p>
+          <a href="#" class="text-blue-500 hover:underline">Ver mais</a>
+        </div>
+        <div class="bg-white p-4 rounded shadow-lg">
+          <h3 class="text-2xl font-bold mb-2">Projeto 2</h3>
+          <p class="mb-4">Descrição breve do projeto.</p>
+          <a href="#" class="text-blue-500 hover:underline">Ver mais</a>
+        </div>
+        <div class="bg-white p-4 rounded shadow-lg">
+          <h3 class="text-2xl font-bold mb-2">Projeto 3</h3>
+          <p class="mb-4">Descrição breve do projeto.</p>
+          <a href="#" class="text-blue-500 hover:underline">Ver mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section id="about" class="py-16 bg-gray-800 text-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">Sobre Mim</h2>
+      <p class="text-xl">Sou um desenvolvedor com experiência em tecnologias como PHP, JavaScript, NodeJS, e mais. Tenho paixão por criar soluções inovadoras e eficientes para problemas complexos.</p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">Contato</h2>
+      <form id="contactForm" class="max-w-lg mx-auto bg-white p-8 rounded shadow-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700">Nome:</label>
+          <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700">Email:</label>
+          <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded" />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700">Mensagem:</label>
+          <textarea id="message" class="w-full p-2 border border-gray-300 rounded"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 p-4 text-center text-white">
+    <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
