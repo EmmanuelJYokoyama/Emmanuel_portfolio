@@ -10,4 +10,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       alert('Por favor, preencha todos os campos.');
     }
   });
+
+document.getElementById('projeto1').addEventListener('click', function(event){
+    window.location.href("/docs/public/otimizacao.html")
+
+})
   
