@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  typeWriter();
+  typeWriter();Currículo Emmanuel Yokoyama .pdf
 });
 
 
