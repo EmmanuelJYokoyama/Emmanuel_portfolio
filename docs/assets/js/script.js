@@ -31,3 +31,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   typeWriter();
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const projectElement = document.querySelector('.projeto1');
+  const projectElement2 = document.querySelector('.projeto2');
+  const projectElement3 = document.querySelector('.projeto3');
+
+  projectElement.addEventListener('click', function() {
+      window.location.href = 'https://www.inicepg.univap.br/cd/INIC_2023/anais/arquivos/RE_0528_0429_01.pdf'; 
+
+  });
+  projectElement2.addEventListener('click', function() {
+      window.location.href = 'https://github.com/Draco-Imperium/API_FATEC1'; 
+
+  });
+  projectElement3.addEventListener('click', function() {
+      window.location.href = '#';
+      window.alert("Projeto em desenvolvimento!") 
+
+  });
+
+});
