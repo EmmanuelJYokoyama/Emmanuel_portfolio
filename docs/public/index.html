@@ -12,25 +12,24 @@
   <!-- Navbar -->
   <nav class="navbar bg-gray-800 p-4">
     <div class="container mx-auto flex justify-between items-center">
-      <a href="#home" class="text-white text-2xl font-bold">Meu Portfólio</a>
+      <a href="#home" class="text-white text-4xl font-bold">EY</a>
       <div>
         <a href="#projects" class="text-white px-4">Projetos</a>
         <a href="#about" class="text-white px-4">Sobre Mim</a>
-        <a href="#contact" class="text-white px-4">Contato</a>
+        <a href="#contato" class="text-white px-4">Contato</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-800 text-white">
-    <h1 class="text-5xl font-bold mb-4">Olá, Eu sou Emmanuel Yokoyama</h1>
+  <section id="home" class="hero h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-800 to-gray-300 text-white">
+    <h1 id="nome-digitado" class="text-5xl font-bold mb-4">Olá, Eu sou Emmanuel Yokoyama</h1> <br>
     <p class="text-xl">Desenvolvo soluções FullStack em diversas tecnologias.</p>
   </section>
 
   <!-- Projetos -->
-  <section id="projects" class="projects py-16 bg-gray-200">
+  <section id="projects" class="projects py-16 bg-gradient-to-t from-gray-200 via-gray-300 to-gray-300">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-8">Meus Projetos</h2>
+      <h2 class="text-4xl font-bold text-center  mb-8">Meus Projetos</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
         <div class="project projeto1 bg-white p-4 rounded shadow-lg">
@@ -70,11 +69,11 @@
   </section>
 
   <!-- Sobre Mim -->
-  <section id="about" class="about py-16 bg-gradient-to-t from-gray-800 to-gray-200 ">
+  <section id="about" class="about py-16 bg-gradient-to-t from-gray-800 via-gray-500 to-gray-200 ">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Imagem Pessoal -->
       <div class="flex justify-center items-center">
-        <img src="../images/EU.jpeg" alt="Minha Imagem" class="w-60 h-61 object-cover shadow-lg" />
+        <img src="../images/EU2.jpg" alt="Minha Imagem" class="imagempessoal object-cover shadow-lg" />
       </div>
 
       <!-- Informações pessoais -->
@@ -101,16 +100,32 @@
 
         <!-- Tecnologias -->
         <div>
-          <h3 class="text-2xl font-semibold mb-2">Tecnologias</h3>
+          <h3 class="text-2xl font-semibold text-white mb-2">Tecnologias</h3>
           <div class="flex flex-wrap gap-4">
             <img src="https://skillicons.dev/icons?i=php"/>
             <img src="https://skillicons.dev/icons?i=js"/>
-            <span class="bg-gray-700 px-3 py-1 rounded-full text-white">NodeJS</span>
-            <span class="bg-gray-700 px-3 py-1 rounded-full text-white">VueJS</span>
-            <span class="bg-gray-700 px-3 py-1 rounded-full text-white">Kotlin</span>
-            <span class="bg-gray-700 px-3 py-1 rounded-full text-white">Python</span>
-            <span class="bg-gray-700 px-3 py-1 rounded-full text-white">Docker</span>
-            <span class="bg-gray-700 px-3 py-1 rounded-full text-white">AWS</span>
+            <img src="https://skillicons.dev/icons?i=nodejs"/>
+            <img src="https://skillicons.dev/icons?i=kotlin"/>
+            <img src="https://skillicons.dev/icons?i=python"/>
+            <img src="https://skillicons.dev/icons?i=docker"/>
+            <img src="https://skillicons.dev/icons?i=cs"/>
+            <img src="https://skillicons.dev/icons?i=laravel"/>
+            <img src="https://skillicons.dev/icons?i=aws"/>
+            <img src="https://skillicons.dev/icons?i=flask"/>
+            <img src="https://skillicons.dev/icons?i=ts"/>
+            <img src="https://skillicons.dev/icons?i=mysql"/>
+            <img src="https://skillicons.dev/icons?i=mongodb"/>
+            <img src="https://skillicons.dev/icons?i=git"/>
+            <img src="https://skillicons.dev/icons?i=c"/>
+            <img src="https://skillicons.dev/icons?i=dotnet"/>
+            <img src="https://skillicons.dev/icons?i=sqlite"/>
+            <img src="https://skillicons.dev/icons?i=rails"/>
+            <img src="https://skillicons.dev/icons?i=tailwind"/>
+            <img src="https://skillicons.dev/icons?i=css"/>
+            <img src="https://skillicons.dev/icons?i=html"/>
+            <img src="https://skillicons.dev/icons?i=postman"/>
+            <img src="https://skillicons.dev/icons?i=java"/>
+            <img src="https://skillicons.dev/icons?i=figma"/>
           </div>
         </div>
       </div>
@@ -118,7 +133,7 @@
   </section>
 
 
-  <footer class="footer bg-gray-800 p-4 text-center text-white">
+  <footer id="contato" class="footer bg-gray-800 p-4 text-center text-white">
     <div class="container mx-auto">
       <h2 class="text-lg font-bold mb-4">Contatos</h2>
       <div class="flex justify-center space-x-4">
@@ -152,6 +167,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

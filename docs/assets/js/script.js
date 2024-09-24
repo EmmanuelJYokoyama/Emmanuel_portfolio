@@ -1,18 +1,33 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-  
-    if (name && email && message) {
-      alert(`Obrigado por entrar em contato, ${name}! Sua mensagem foi enviada.`);
+document.addEventListener('DOMContentLoaded', function () {
+  const nameElement = document.getElementById('nome-digitado');
+  const texts = ["Olá visitante, eu sou Emmanuel Yokoyama", "Bem vindo ao meu portfólio!", "Apaixonado por Tecnologia e por novas invenções!  "];
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeWriter() {
+    const currentText = texts[textIndex];
+
+    if (!isDeleting && charIndex <= currentText.length) {
+
+      nameElement.innerHTML = currentText.substring(0, charIndex);
+      charIndex++;
+      setTimeout(typeWriter, 95);
+    } else if (isDeleting && charIndex >= 0) {
+
+      nameElement.innerHTML = currentText.substring(0, charIndex);
+      charIndex--;
+      setTimeout(typeWriter, 50);
     } else {
-      alert('Por favor, preencha todos os campos.');
+      isDeleting = !isDeleting;
+
+      if (!isDeleting) {
+        textIndex = (textIndex + 1) % texts.length;
+      }
+
+      setTimeout(typeWriter, 1000);
     }
-  });
+  }
 
-document.getElementById('projeto1').addEventListener('click', function(event){
-    window.location.href("/docs/public/otimizacao.html")
-
-})
-  
+  typeWriter();
+});

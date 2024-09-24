@@ -44,6 +44,27 @@ body {
     height: 900px;
 }
 
+.imagempessoal{
+    width: 50%;
+    height: 100%;
+}
+
+@keyframes blinkCaret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Estilo do nome com barra de digitação */
+  #nome-digitado {
+    display: inline-block;
+    border-right: 2px solid #ffffff; /* Barra piscante */
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    overflow: hidden; /* Para o efeito de digitação */
+    animation: blinkCaret 0.7s step-end infinite;
+  }
+
 /* Footer */
 /* .footer {
     background-color: #065f46; /* Mesma cor verde escura do "Sobre Mim" */
