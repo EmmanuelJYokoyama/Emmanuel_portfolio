@@ -47,7 +47,7 @@ body {
 
 
 /* Responsividade */
-@media (max-width: 640px) {
+@media (max-width: 740px) {
     .navbar a {
         display: block;
         justify-content: center;
@@ -55,14 +55,24 @@ body {
         margin-bottom: 10px;
     }
 
+    .hero{
+        margin-bottom: -5ch;
+    }
+
     .hero h1{
         display: flex;
-        justify-content: right;
-        width: 30%;
+        font-size: 40px;
+        padding-left: 20px;
+        padding-bottom: -20px;
+        justify-content: center;
+        /* width: 8%; */
     }
 
     .hero p{
-        padding: 10px;
+        padding-top: -20px;
+        display: flex;
+        font-size: 12px;
+
     }
 
     .container {
