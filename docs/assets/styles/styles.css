@@ -9,10 +9,6 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero Section */
-.hero {
-    /* background-image: linear-gradient(to right, #065f46, #047857); */
-}
 
 /* Projetos */
 .project {
@@ -49,31 +45,24 @@ body {
     height: 100%;
 }
 
-@keyframes blinkCaret {
-    50% {
-      border-color: transparent;
-    }
-  }
-  
-  /* Estilo do nome com barra de digitação */
-  #nome- {
-    display: inline-block;
-    border-right: 2px solid #ffffff; /* Barra piscante */
-    font-family: 'Poppins', sans-serif;
-    white-space: nowrap;
-    overflow: hidden; /* Para o efeito de digitação */
-    animation: blinkCaret 0.7s step-end infinite;
-  }
 
-/* Footer */
-/* .footer {
-    background-color: #065f46; /* Mesma cor verde escura do "Sobre Mim" */
-/* } */ 
 /* Responsividade */
 @media (max-width: 640px) {
     .navbar a {
         display: block;
+        justify-content: center;
+        padding: 20px;
         margin-bottom: 10px;
+    }
+
+    .hero h1{
+        display: flex;
+        justify-content: right;
+        width: 30%;
+    }
+
+    .hero p{
+        padding: 10px;
     }
 
     .container {
