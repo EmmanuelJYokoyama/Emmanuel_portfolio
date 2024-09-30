@@ -45,6 +45,10 @@ body {
     height: 90%;
 }
 
+.logoimg{
+    width: 10%;
+    height: 10%;
+}
 
 /* Responsividade */
 @media (max-width: 740px) {
