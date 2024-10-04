@@ -30,9 +30,6 @@ body {
     background-color: #f7fafc; /* Cor de fundo mais clara */
 } */
 
-#n8n{
-    borderpx;
-}
 
 
 .pdf{
@@ -75,6 +72,12 @@ body {
         justify-content: center;
         /* width: 8%; */
     }
+
+    .logoimg{
+        width: 50%;
+        height: 50%;
+    }
+    
 
     .hero p{
         padding-top: -20px;
