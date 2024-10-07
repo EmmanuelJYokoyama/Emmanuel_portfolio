@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const projectElement = document.querySelector('.projeto1');
   const projectElement2 = document.querySelector('.projeto2');
   const projectElement3 = document.querySelector('.projeto3');
+  const certificado1 = document.querySelector('.cert1');
+  const certificado2 = document.querySelector('.cert2');
 
   projectElement.addEventListener('click', function () {
     window.location.href = 'https://www.inicepg.univap.br/cd/INIC_2023/anais/arquivos/RE_0528_0429_01.pdf';
@@ -45,10 +47,34 @@ document.addEventListener('DOMContentLoaded', function () {
     window.location.href = 'https://github.com/Draco-Imperium/API_FATEC1';
 
   });
+
   projectElement3.addEventListener('click', function () {
     window.location.href = '#';
     window.alert("Projeto em desenvolvimento!")
 
   });
 
+  certificado1.addEventListener('click', function () {
+    window.location.href = 'http://www.wagnerscj.com.br/cti30/certificados/8f201620bd24bb1e26131efcd33a1d80.pdf';
+
+  });
+
+
+
+  $(document).ready(function () {
+    $('#menu-button').on('click', function () {
+      // Check if the menu is hidden
+      if ($('#mobile-menu').is(':hidden')) {
+        // Show the menu with a slide down animation and fade in
+        $('#mobile-menu').removeClass('hidden').hide().slideDown(500).css({ opacity: 0 }).animate({ opacity: 1 }, 500);
+      } else {
+        // Hide the menu with a slide up animation and fade out
+        $('#mobile-menu').animate({ opacity: 0 }, 500, function () {
+          $(this).slideUp(500, function () {
+            $(this).addClass('hidden');
+          });
+        });
+      }
+    });
+  });
 })

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Portfólio Emmanuel Yokoyama</title>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/styles/styles.css" />
 </head>
@@ -16,112 +16,165 @@
   <nav class="navbar bg-violet-900 p-4">
     <div class="container mx-auto flex justify-between items-center">
       <a href="#home" class="text-white text-4xl font-bold logoimg"><img src="../images/LOGO PNG.png" alt="logo"></a>
-      <div>
+
+      <!-- Hamburger icon button for mobile -->
+      <button class="md:hidden block text-white" id="menu-button">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <div class="hidden md:flex space-x-4" id="navbar-links">
         <a href="https://github.com/EmmanuelJYokoyama/Curriculo/blob/main/Currículo%20EmmanuelYokoyama.pdf"
-          class="text-white px-4">Currículo</a>
-        <a href="#projects" class="text-white px-4">Projetos</a>
-        <a href="#about" class="text-white px-4">Sobre Mim</a>
-        <a href="#contato" class="text-white px-4">Contato</a>
+          class="text-white">Currículo</a>
+        <a href="#projects" class="text-white">Projetos</a>
+        <a href="#about" class="text-white">Sobre Mim</a>
+        <a href="#contato" class="text-white">Contato</a>
       </div>
+    </div>
+
+    <div class="md:hidden hidden" id="mobile-menu">
+      <a href="https://github.com/EmmanuelJYokoyama/Curriculo/blob/main/Currículo%20EmmanuelYokoyama.pdf"
+        class="block text-white">Currículo</a>
+      <a href="#projects" class="block text-white">Projetos</a>
+      <a href="#about" class="block text-white">Sobre Mim</a>
+      <a href="#contato" class="block text-white">Contato</a>
     </div>
   </nav>
 
-  <section id="home"
-    class="hero h-screen flex flex-col justify-center items-center bg-gradient-to-b from-violet-900 via-violet-500 to-violet-400 text-white">
+  <section id="home" class="hero h-screen flex flex-col justify-center items-center bg-gradient-to-b from-violet-900 via-violet-500 to-violet-400 text-white">
     <h1 id="nome-digitado" class="text-7xl font-bold mb-4">Olá visitante! Eu sou Emmanuel Yokoyama</h1> <br>
     <p class="text-3xl">Desenvolvo soluções FullStack em diversas tecnologias.</p>
   </section>
 
- <!-- Sobre Mim -->
- <section id="about" class="about py-16 bg-violet-400">
-  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 ">
-    <!-- Imagem Pessoal -->
-    <div class="flex justify-center items-center">
-      <img src="../images/EU2.jpg" alt="Minha Imagem" class="imagempessoal object-cover shadow-lg" />
-    </div>
-
-    <!-- Informações pessoais -->
-    <div>
-      <h2 class="text-4xl font-bold mb-4 text-bold">Sobre Mim</h2> <br>
-
-      <!-- Resumo -->
-      <div class="mb-8">
-        <h3 class="text-2xl font-semibold mb-2 text-black ">Resumo</h3>
-        <p class="text-white text-lg">
-          Sou um desenvolvedor apaixonado por tecnologia, com foco em desenvolvimento FullStack.
-          Tenho experiência em criar soluções web e mobile que atendam às necessidades de diferentes
-          tipos de clientes, utilizando as melhores práticas e ferramentas do mercado.
-        </p>
+  <!-- Sobre Mim -->
+  <section id="about" class="about py-16 bg-violet-400">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 ">
+      <div class="flex justify-center items-center">
+        <img src="../images/EU2.jpg" alt="Minha Imagem" class="imagempessoal object-cover shadow-lg" />
       </div>
-
-      <!-- Formação -->
-      <div class="mb-8 text-white">
-        <h3 class="text-2xl font-semibold text-black mb-2">Formação</h3>
-        <p class="text-lg mb-4">
-          Formado técnico em informatica concomitante ao ensino médio no Colégio Técnico Univap - Centro.
-        </p>
-        
-        <p class="text-lg">
-          Graduando em Desenvolvimento de Software Multiplataformas pela FATEC São José dos Campos.
-        </p>
-      </div>
-
-      <!-- Experiencia Profissional -->
-      <div class="mb-8">
-        <h3 class="text-2xl font-semibold mb-1 text-black">Experiência</h3>
-        <h4 class="text-lg font-normal italic mb-2 text-zinc-50">Estagiário de Banco de Dados - ADVTEC SOLUÇÕES ERP</h4>
-        <p class="text-white p-2 font-light">
-          Auxiliei o DBA Sênior na resolução de problemas no banco de dados com soluções SQL.<br>
-          Prestava suporte ao cliente via acesso remoto utilizando o AnyDesk<br>
-          Realizava relatórios do sistema, relatando bugs e inconsistências para futuras melhorias.<br>
-          Alterava e realizava melhorias determinadas pelo cliente ou por colegas desenvolvedores
-        </p>
-
-        <br>
-
-        <h4 class="text-lg font-normal italic mb-1 text-zinc-50">Estagiário de desenvolvimento - FlipFlopLab</h4>
-        <p class="text-white p-2 font-light">
-          Desenvolvimento de soluções de bugs para software interno.<br>
-          Suporte ao cliente e à chamados dos Desenvolvedores.<br>
-          Controle de Issues e acompanhamento de Sprints por meio do Jira.
-          
-        </p>
-      </div>
-
-      <!-- Tecnologias -->
       <div>
-        <h3 class="text-2xl font-semibold text-white mb-2">Tecnologias</h3>
-        <div class="flex flex-wrap gap-4">
-          <img src="https://skillicons.dev/icons?i=php" />
-          <img src="https://skillicons.dev/icons?i=js" />
-          <img src="https://skillicons.dev/icons?i=nodejs" />
-          <img src="https://skillicons.dev/icons?i=kotlin" />
-          <img src="https://skillicons.dev/icons?i=python" />
-          <img src="https://skillicons.dev/icons?i=docker" />
-          <img src="https://skillicons.dev/icons?i=cs" />
-          <img src="https://skillicons.dev/icons?i=laravel" />
-          <img src="https://skillicons.dev/icons?i=aws" />
-          <img src="https://skillicons.dev/icons?i=flask" />
-          <img src="https://skillicons.dev/icons?i=ts" />
-          <img src="https://skillicons.dev/icons?i=mysql" />
-          <img src="https://skillicons.dev/icons?i=mongodb" />
-          <img src="https://skillicons.dev/icons?i=git" />
-          <img src="https://skillicons.dev/icons?i=c" />
-          <img src="https://skillicons.dev/icons?i=dotnet" />
-          <img src="https://skillicons.dev/icons?i=sqlite" />
-          <img src="https://skillicons.dev/icons?i=rails" />
-          <img src="https://skillicons.dev/icons?i=tailwind" />
-          <img src="https://skillicons.dev/icons?i=css" />
-          <img src="https://skillicons.dev/icons?i=html" />
-          <img src="https://skillicons.dev/icons?i=postman" />
-          <img src="https://skillicons.dev/icons?i=java" />
-          <img src="https://skillicons.dev/icons?i=figma" />
-          <img height="48" width="48" id="n8n" src="https://avatars.githubusercontent.com/u/45487711?s=48&v=4"/>
+        <h2 class="text-4xl font-bold mb-4 text-bold">Sobre Mim</h2> <br>
+        <div class="mb-8">
+          <h3 class="text-2xl font-semibold mb-2 text-black ">Resumo</h3>
+          <p class="text-white text-lg">
+            Sou um desenvolvedor apaixonado por tecnologia, com foco em desenvolvimento FullStack.
+            Tenho experiência em criar soluções web e mobile que atendam às necessidades de diferentes
+            tipos de clientes, utilizando as melhores práticas e ferramentas do mercado.
+          </p>
+        </div>
+
+        <!-- Formação -->
+        <div class="mb-8 text-white">
+          <h3 class="text-2xl font-semibold text-black mb-2">Formação</h3>
+          <p class="text-lg mb-4">
+            Formado técnico em informática concomitante ao ensino médio no Colégio Técnico Univap - Centro.
+          </p>
+
+          <p class="text-lg">
+            Graduando em Desenvolvimento de Software Multiplataformas pela FATEC São José dos Campos.
+          </p>
+        </div>
+
+        <!-- Experiencia Profissional -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-semibold mb-1 text-black">Experiência</h3>
+          <h4 class="text-lg font-normal italic mb-2 text-zinc-50">Estagiário de Banco de Dados - ADVTEC SOLUÇÕES ERP
+          </h4>
+          <p class="text-white p-2 font-light">
+            Auxiliei o DBA Sênior na resolução de problemas no banco de dados com soluções SQL.<br>
+            Prestava suporte ao cliente via acesso remoto utilizando o AnyDesk<br>
+            Realizava relatórios do sistema, relatando bugs e inconsistências para futuras melhorias.<br>
+            Alterava e realizava melhorias determinadas pelo cliente ou por colegas desenvolvedores
+          </p>
+
+          <br>
+
+          <h4 class="text-lg font-normal italic mb-1 text-zinc-50">Estagiário de desenvolvimento - FlipFlopLab</h4>
+          <p class="text-white p-2 font-light">
+            Desenvolvimento de soluções de bugs para software interno.<br>
+            Suporte ao cliente e à chamados dos Desenvolvedores.<br>
+            Controle de Issues e acompanhamento de Sprints por meio do Jira.
+
+          </p>
+        </div>
+
+        <!-- Tecnologias -->
+        <div>
+          <h3 class="text-2xl font-semibold text-white mb-2">Tecnologias</h3>
+          <div class="flex flex-wrap gap-4">
+            <img src="https://skillicons.dev/icons?i=php" />
+            <img src="https://skillicons.dev/icons?i=js" />
+            <img src="https://skillicons.dev/icons?i=nodejs" />
+            <img src="https://skillicons.dev/icons?i=kotlin" />
+            <img src="https://skillicons.dev/icons?i=python" />
+            <img src="https://skillicons.dev/icons?i=docker" />
+            <img src="https://skillicons.dev/icons?i=cs" />
+            <img src="https://skillicons.dev/icons?i=laravel" />
+            <img src="https://skillicons.dev/icons?i=aws" />
+            <img src="https://skillicons.dev/icons?i=flask" />
+            <img src="https://skillicons.dev/icons?i=ts" />
+            <img src="https://skillicons.dev/icons?i=mysql" />
+            <img src="https://skillicons.dev/icons?i=mongodb" />
+            <img src="https://skillicons.dev/icons?i=git" />
+            <img src="https://skillicons.dev/icons?i=c" />
+            <img src="https://skillicons.dev/icons?i=dotnet" />
+            <img src="https://skillicons.dev/icons?i=sqlite" />
+            <img src="https://skillicons.dev/icons?i=rails" />
+            <img src="https://skillicons.dev/icons?i=tailwind" />
+            <img src="https://skillicons.dev/icons?i=css" />
+            <img src="https://skillicons.dev/icons?i=html" />
+            <img src="https://skillicons.dev/icons?i=postman" />
+            <img src="https://skillicons.dev/icons?i=java" />
+            <img src="https://skillicons.dev/icons?i=figma" />
+            <img height="48" width="48" id="n8n" src="https://avatars.githubusercontent.com/u/45487711?s=48&v=4" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
+  <!-- CERTIFICAÇÕES -->
+
+  <section id="certifications" class="py-16 bg-violet-400">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center text-white mb-8">Certificações</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        
+        <div class="certification cert1 bg-white p-4 rounded shadow-lg">
+          <h3 class="text-2xl font-bold mb-2">Certificação de Análise de Dados com Excel</h3>
+          <p class="mb-4">
+            Certificação em Análise de dados com Excel ministrada pelo Prof. Msc. Wagner dos Santos C. de Jesus
+            com foco em criação de Macros utilizando VBA e criação de gráficos dinamicos.
+          </p>
+        </div>
+
+        <div class="certification cert2 bg-white p-4 rounded shadow-lg">
+          <h3 class="text-2xl font-bold mb-2">Certificação de Iniciação Científica</h3>
+          <p class="mb-4">
+            Certificação de Aprovação de projeto no XVII Encontro Latino-Americano de Iniciação Científica Jr. (2023)
+          </p>
+        </div>
+
+        <div class="certification cert3 bg-white p-4 rounded shadow-lg">
+          <h3 class="text-2xl font-bold mb-2">Certificação Python - Data Science</h3>
+          <p class="mb-4">
+            Certificação em análise de dados e machine learning utilizando Python, bibliotecas como Pandas, Numpy e Scikit-learn.
+          </p>
+        </div>
+
+        <div class="certification cert4 bg-white p-4 rounded shadow-lg">
+          <h3 class="text-2xl font-bold mb-2">Certificação SQL & Banco de Dados</h3>
+          <p class="mb-4">
+            Certificação em design, consulta e otimização de bancos de dados relacionais, com foco em SQL Server, MySQL e PostgreSQL.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- Projetos -->
   <section id="projects" class="projects py-16 bg-gradient-to-t from-violet-700 via-violet-500 to-violet-400 ">
@@ -150,7 +203,8 @@
           <p class="mb-4">Criação de uma plataforma web que disponibilize informações sobre o
             desempenho dos vereadores da cidade durante o atual mandato. As informações estão
             disponibilizadas no site da prefeitura de São José dos Campos <br>
-            O objetivo é oferecer aos eleitores dados claros e acessíveis que ajudem a tomar decisões informadas nas eleições municipais
+            O objetivo é oferecer aos eleitores dados claros e acessíveis que ajudem a tomar decisões informadas nas
+            eleições municipais
             que se aproximam. </p>
           <a href="https://github.com/Draco-Imperium/API_FATEC1" class="text-blue-500 hover:underline">Ver mais</a>
         </div>
@@ -169,8 +223,7 @@
     </div>
   </section>
 
- 
-
+<!-- CONTATO -->
 
   <footer id="contato" class="footer bg-violet-700 p-4 text-center text-white">
     <div class="container mx-auto">

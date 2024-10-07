@@ -14,11 +14,20 @@ body {
 .project {
     transition: transform 0.3s ease-in-out;
 }
+.certification {
+    transition: transform 0.3s ease-in-out;
+}
 
 .project:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
+
+.certification:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 
 /* Sobre Mim */
 /* .about {
