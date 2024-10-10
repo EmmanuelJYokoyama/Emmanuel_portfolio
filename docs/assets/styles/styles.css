@@ -61,7 +61,8 @@ body {
 }
 
 /* Responsividade */
-@media (max-width: 740px) {
+@media (max-width: 770px) {
+
     .navbar a {
         display: block;
         justify-content: center;
