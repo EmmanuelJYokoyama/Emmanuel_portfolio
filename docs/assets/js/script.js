@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const projectElement2 = document.querySelector('.projeto2');
   const projectElement3 = document.querySelector('.projeto3');
   const certificado1 = document.querySelector('.cert1');
-  const certificado2 = document.querySelector('.cert2');
+  const certificado4 = document.querySelector('.cert4');
 
   projectElement.addEventListener('click', function () {
     window.location.href = 'https://www.inicepg.univap.br/cd/INIC_2023/anais/arquivos/RE_0528_0429_01.pdf';
@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
 
+  certificado4.addEventListener("click", function(){
+    window.location.href = "../images/INOVADORES20242.pdf"
+  })
 
 
   $(document).ready(function () {
