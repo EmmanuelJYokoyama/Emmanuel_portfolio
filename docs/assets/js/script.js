@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const projectElement2 = document.querySelector('.projeto2');
   const projectElement3 = document.querySelector('.projeto3');
   const certificado1 = document.querySelector('.cert1');
+  const certificado2 = document.querySelector('.cert2');
   const certificado4 = document.querySelector('.cert4');
 
   projectElement.addEventListener('click', function () {
@@ -56,6 +57,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   certificado1.addEventListener('click', function () {
     window.location.href = 'http://www.wagnerscj.com.br/cti30/certificados/8f201620bd24bb1e26131efcd33a1d80.pdf';
+
+  });
+
+  certificado2.addEventListener('click', function () {
+    window.location.href = '../images/certificado_trabalho-aceito_ICEIJID0528.pdf';
 
   });
 
