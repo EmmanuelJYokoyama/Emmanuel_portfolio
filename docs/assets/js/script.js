@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const projectElement = document.querySelector('.projeto1');
   const projectElement2 = document.querySelector('.projeto2');
   const projectElement3 = document.querySelector('.projeto3');
+  const projectElement4 = document.querySelector('.projeto4');
   const certificado1 = document.querySelector('.cert1');
   const certificado2 = document.querySelector('.cert2');
   const certificado4 = document.querySelector('.cert4');
@@ -52,6 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
   projectElement3.addEventListener('click', function () {
     window.location.href = '#';
     window.alert("Projeto em desenvolvimento!")
+
+  });
+  projectElement4.addEventListener('click', function () {
+    window.location.href = 'https://github.com/GeneSys-fatec/API-2DSM';
+   
 
   });
 
